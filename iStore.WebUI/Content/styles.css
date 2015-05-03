@@ -38,6 +38,7 @@ body {
 }
 
 .store-banner {
+    position: relative;
     height: 370px; 
     background: #C4C4C4;
     border-radius: 10px;

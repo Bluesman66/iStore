@@ -1,0 +1,28 @@
+﻿@model string
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="hidden-md hidden-sm hidden-xs">
+            <ul class="store-menu center-block">
+                <li class="@(Model == "Store" ? "active" : "inactive")">
+                    <a href="#" class="" style="">МАГАЗИН</a>
+                </li>
+                <li class="@(Model == "About" ? "active" : "inactive")">
+                    <a href="#" class="" style="">О НАС</a>
+                </li>
+                <li class="@(Model == "Where" ? "active" : "inactive")">
+                    <a href="#" class="" style="">ГДЕ КУПИТЬ</a>
+                </li>
+                <li class="@(Model == "FAQ" ? "active" : "inactive")">
+                    <a href="#" class="" style="">ВОПРОСЫ</a>
+                </li>
+                <li class="@(Model == "Contacts" ? "active" : "inactive")">
+                    <a href="#" class="" style="">КОНТАКТЫ</a>
+                </li>
+                <li class="@(Model == "Cart" ? "active" : "inactive")">
+                    <a href="#" class="" style="">КОРЗИНА</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
