@@ -1,33 +1,20 @@
 ﻿@model string
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" style="">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Sell</a>
-        </div>
-        <div class="collapse navbar-collapse" style="">
-            <ul class="nav navbar-nav">
-                <li class="@(Model == "Explore" ? "active" : "inactive")">
-                    <a href="#" class="" style="">Explore</a>
-                </li>
-                <li class="@(Model == "Looks" ? "active" : "inactive")">
-                    <a href="#" class="">Looks</a>
-                </li>
-                <li class="@(Model == "Style" ? "active" : "inactive")">
-                    <a href="#" class="">Style</a>
-                </li>
-                <li class="@(Model == "About" ? "active" : "inactive")">
-                    <a href="#" class="">About</a>
-                </li>
-                <li>
-                    <a href="#myModal" data-toggle="modal" data-target="#myModal">Sign in</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<li class="@(Model == "Store" ? "active" : "inactive")">
+    <a href="#" class="" style="">МАГАЗИН</a>
+</li>
+<li class="@(Model == "About" ? "active" : "inactive")">
+    <a href="#" class="" style="">О НАС</a>
+</li>
+<li class="@(Model == "Where" ? "active" : "inactive")">
+    <a href="#" class="" style="">ГДЕ КУПИТЬ</a>
+</li>
+<li class="@(Model == "FAQ" ? "active" : "inactive")">
+    <a href="#" class="" style="">ВОПРОСЫ</a>
+</li>
+<li class="@(Model == "Contacts" ? "active" : "inactive")">
+    <a href="#" class="" style="">КОНТАКТЫ</a>
+</li>
+<li class="@(Model == "Cart" ? "active" : "inactive")">
+    <a href="#" class="" style="">КОРЗИНА</a>
+</li>
