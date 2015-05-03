@@ -1,20 +1,20 @@
 ﻿@model string
 
-<li class="@(Model == "Store" ? "active-link" : "inactive-link")">
+<li class="@(Model == "Store" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("МАГАЗИН", "Store", "Home")
 </li>
-<li class="@(Model == "About" ? "active-link" : "inactive-link")">
+<li class="@(Model == "About" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("О НАС", "About", "Home")
 </li>
-<li class="@(Model == "Where" ? "active-link" : "inactive-link")">
+<li class="@(Model == "Where" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("ГДЕ КУПИТЬ", "Where", "Home")
 </li>
-<li class="@(Model == "FAQ" ? "active-link" : "inactive-link")">
+<li class="@(Model == "FAQ" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("ВОПРОСЫ", "Faq", "Home")
 </li>
-<li class="@(Model == "Contacts" ? "active-link" : "inactive-link")">
+<li class="@(Model == "Contacts" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("КОНТАКТЫ", "Contacts", "Home")
 </li>
-<li class="@(Model == "Cart" ? "active-link" : "inactive-link")">
+<li class="@(Model == "Cart" ? "active-menu-item" : "inactive-menu-item")">
     @Html.ActionLink("КОРЗИНА", "Cart", "Home")
 </li>

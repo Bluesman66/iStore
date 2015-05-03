@@ -95,20 +95,20 @@
     background: #DEDADA;
 }
 
-.active-link {
+.active-menu-item {
     background: #DEDADA;
 }
 
-.active-link > a{
+.active-menu-item > a{
     color: grey;
     text-decoration: none;
 }
 
-.inactive-link {
+.inactive-menu-item {
     background: #71DCDD; 
 }
 
-.inactive-link > a{
+.inactive-menu-item > a{
     color: white;
     text-decoration: none;
 }

@@ -1,11 +1,36 @@
-﻿<div class="navbar navbar-default visible-xs hidden-sm hidden-md hidden-lg">
-    <div class="container" style="">
+﻿@model string
+
+<div class="navbar navbar-default visible-xs hidden-sm hidden-md hidden-lg">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" href="#">Фирма</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="@(Model == "Store" ? "active" : "")">
+                    @Html.ActionLink("Магазин", "Store", "Home")
+                </li>
+                <li class="@(Model == "About" ? "active" : "")">
+                    @Html.ActionLink("О нас", "About", "Home")
+                </li>
+                <li class="@(Model == "Where" ? "active" : "")">
+                    @Html.ActionLink("Где купить", "Where", "Home")
+                </li>
+                <li class="@(Model == "FAQ" ? "active" : "")">
+                    @Html.ActionLink("Вопросы", "Faq", "Home")
+                </li>
+                <li class="@(Model == "Contacts" ? "active" : "")">
+                    @Html.ActionLink("Контакты", "Contacts", "Home")
+                </li>
+                <li class="@(Model == "Cart" ? "active" : "")">
+                    @Html.ActionLink("Корзина", "Cart", "Home")
+                </li>
+            </ul>
         </div>
     </div>
 </div>
