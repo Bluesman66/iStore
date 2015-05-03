@@ -85,7 +85,6 @@
     height: 30px;
     font-size: 1.2em;
     font-weight: bold;
-    background: #F9C402;
     margin-right: 2px;
     text-align: center;
     line-height: 30px;
@@ -101,7 +100,6 @@
     height: 30px;
     font-size: 1em;
     font-weight: bold;
-    background: #F9C402;
     margin-right: 2px;
     text-align: center;
     line-height: 30px;
@@ -117,7 +115,6 @@
     height: 26px;
     font-size: 0.8em;
     font-weight: bold;
-    background: #F9C402;
     margin-right: 2px;
     text-align: center;
     line-height: 26px;
@@ -131,4 +128,22 @@
 .store-menu-md li:hover, 
 .store-menu-sm li:hover {
     background: #DEDADA;
+}
+
+.active-link {
+    background: #DEDADA;
+}
+
+.active-link > a{
+    color: grey;
+    text-decoration: none;
+}
+
+.inactive-link {
+    background: #F9C402;
+}
+
+.inactive-link > a{
+    color: white;
+    text-decoration: none;
 }

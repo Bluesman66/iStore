@@ -20,7 +20,8 @@ namespace iStore.WebUI
                 "~/Scripts/knockout-{version}.js",
                 "~/Scripts/knockout.mapping-latest.js",
                 "~/Scripts/perpetuum.knockout.js",
-                "~/Scripts/bootstrap.js"));
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/main.js"));
         }
     }
 }
