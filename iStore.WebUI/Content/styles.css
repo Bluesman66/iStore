@@ -37,20 +37,20 @@ body {
     text-shadow: #ccc 1px 1px 0;
 }
 
-.banner {
+.store-banner {
     height: 370px; 
     background: #C4C4C4;
     border-radius: 10px;
     width: 100%;
 }
 
-.title {
+.store-title {
     position: absolute; 
     top: 80px;
     left: 40px;
 }
 
-ul.store-menu li {
+.store-menu li {
     display: inline-block;
     width: 170px;
     height: 30px;
@@ -65,5 +65,3 @@ ul.store-menu li {
     -ms-border-bottom-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
-    
