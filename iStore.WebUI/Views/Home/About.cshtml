@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "О НАС";
+}
+
+@Html.Partial("_NavigationMenuMobile")
+
+<div class="container">
+    @Html.Partial("_NavigationMenuDesktop", "About")
+
+    <h2>@ViewBag.Title</h2>
+</div>
+

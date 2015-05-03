@@ -2,7 +2,7 @@
     padding-top: 20px;
 }
 
-.productsrow {
+/*.productsrow {
     -moz-column-width: 18em;
     -webkit-column-width: 18em;
     -moz-column-gap: 1em;
@@ -35,7 +35,7 @@
     color: yellow;
     -ms-text-shadow: #ccc 1px 1px 0;
     text-shadow: #ccc 1px 1px 0;
-}
+}*/
 
 .store-banner-lg {
     position: relative;
@@ -140,7 +140,7 @@
 }
 
 .inactive-link {
-    background: #F9C402;
+    background: #71DCDD; 
 }
 
 .inactive-link > a{

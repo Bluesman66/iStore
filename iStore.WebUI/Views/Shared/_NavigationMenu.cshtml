@@ -1,20 +1,20 @@
 ﻿@model string
 
 <li class="@(Model == "Store" ? "active-link" : "inactive-link")">
-    <a href="#">МАГАЗИН</a>
+    @Html.ActionLink("МАГАЗИН", "Store", "Home")
 </li>
 <li class="@(Model == "About" ? "active-link" : "inactive-link")">
-    <a href="#">О НАС</a>
+    @Html.ActionLink("О НАС", "About", "Home")
 </li>
 <li class="@(Model == "Where" ? "active-link" : "inactive-link")">
-    <a href="#">ГДЕ КУПИТЬ</a>
+    @Html.ActionLink("ГДЕ КУПИТЬ", "Where", "Home")
 </li>
 <li class="@(Model == "FAQ" ? "active-link" : "inactive-link")">
-    <a href="#">ВОПРОСЫ</a>
+    @Html.ActionLink("ВОПРОСЫ", "Faq", "Home")
 </li>
 <li class="@(Model == "Contacts" ? "active-link" : "inactive-link")">
-    <a href="#">КОНТАКТЫ</a>
+    @Html.ActionLink("КОНТАКТЫ", "Contacts", "Home")
 </li>
 <li class="@(Model == "Cart" ? "active-link" : "inactive-link")">
-    <a href="#">КОРЗИНА</a>
+    @Html.ActionLink("КОРЗИНА", "Cart", "Home")
 </li>
