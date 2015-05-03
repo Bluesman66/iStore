@@ -121,6 +121,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-skin.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -147,8 +148,8 @@
     <Content Include="Images\ec_banner.jpg" />
     <Content Include="Images\ec_belt.jpg" />
     <Content Include="Images\ec_guy.jpg" />
-    <Content Include="Images\ec_guy1.jpg" />
-    <Content Include="Images\ec_guy2.jpg" />
+    <Content Include="Images\ec_guy_lg.jpg" />
+    <Content Include="Images\ec_guy_md.jpg" />
     <Content Include="Images\ec_jacket.jpg" />
     <Content Include="Images\ec_jeans.jpg" />
     <Content Include="Images\ec_pants.jpg" />

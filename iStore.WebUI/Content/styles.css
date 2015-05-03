@@ -37,7 +37,7 @@ body {
     text-shadow: #ccc 1px 1px 0;
 }
 
-.store-banner {
+.store-banner-lg {
     position: relative;
     height: 370px; 
     background: #C4C4C4;
@@ -45,9 +45,23 @@ body {
     width: 100%;
 }
 
-.store-title {
+.store-banner-md {
+    position: relative;
+    height: 258px; 
+    background: #C4C4C4;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.store-title-lg {
     position: absolute; 
     top: 80px;
+    left: 40px;
+}
+
+.store-title-md {
+    position: absolute; 
+    top: 48px;
     left: 40px;
 }
 

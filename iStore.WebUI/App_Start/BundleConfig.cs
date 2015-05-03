@@ -8,6 +8,7 @@ namespace iStore.WebUI
         {
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                 "~/Content/bootstrap.css",
+                "~/Content/bootstrap-skin.css",
                 "~/Content/css/font-awesome.css",
                 "~/Content/styles.css"));
 
