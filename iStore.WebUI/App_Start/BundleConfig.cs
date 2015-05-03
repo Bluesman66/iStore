@@ -10,7 +10,7 @@ namespace iStore.WebUI
                 "~/Content/bootstrap.css",
                 "~/Content/bootstrap-skin.css",
                 "~/Content/css/font-awesome.css",
-                "~/Content/styles.css"));
+                "~/Content/main.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
