@@ -25,4 +25,8 @@
                 window.location = href;
             }
         });
+
+    $('ul.pagination li.disabled > a').click(function(e) {
+        e.preventDefault();
+    });
 })
