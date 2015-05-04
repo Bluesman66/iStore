@@ -103,10 +103,13 @@
     
     @helper PageLinks(PagingInfo pagingInfo, Func<int, string> pageUrl)
     {
+        var prevPage = pagingInfo.CurrentPage - 1 < 1 ? 1 : pagingInfo.CurrentPage - 1;
+        var nextPage = pagingInfo.CurrentPage + 1 > pagingInfo.TotalPages ? pagingInfo.TotalPages : pagingInfo.CurrentPage + 1;
+        
         <nav style="display: @(pagingInfo.TotalPages == 0 ? "none" : "inline-block")">
             <ul class="pagination">
                 <li class="@(pagingInfo.CurrentPage == 1 ? "disabled" : "")">
-                    <a href="@pageUrl(pagingInfo.CurrentPage - 1 == 0 ? 1 : pagingInfo.CurrentPage - 1)" aria-label="Previous">
+                    <a href="@pageUrl(prevPage)" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
@@ -117,7 +120,7 @@
                 }
                 
                 <li class="@(pagingInfo.CurrentPage == pagingInfo.TotalPages ? "disabled" : "")">
-                    <a href="@pageUrl(pagingInfo.CurrentPage + 1 > pagingInfo.TotalPages ? pagingInfo.TotalPages : pagingInfo.CurrentPage + 1)" aria-label="Next">
+                    <a href="@pageUrl(nextPage)" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>

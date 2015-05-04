@@ -9,11 +9,36 @@ namespace iStore.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Catalog", id = UrlParameter.Optional }
+            routes.MapRoute(name: null,
+                url: "",
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Catalog",
+                    category = (string)null,
+                    page = 1
+                }
             );
+
+            routes.MapRoute(
+                name: null,
+                url: "Page{page}",
+                defaults: new { controller = "Home", action = "Catalog", category = (string)null },
+                constraints: new { page = @"\d+" }
+            );
+
+            routes.MapRoute(null,
+                "{category}",
+                new { controller = "Home", action = "Catalog", page = 1 }
+            );
+
+            routes.MapRoute(null,
+                "{category}/Page{page}",
+                new { controller = "Home", action = "Catalog" },
+                new { page = @"\d+" }
+            );
+
+            routes.MapRoute(null, "{controller}/{action}");
         }
     }
 }
