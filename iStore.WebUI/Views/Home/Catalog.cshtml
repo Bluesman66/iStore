@@ -34,18 +34,25 @@
         var prevPage = pagingInfo.CurrentPage - 1 < 1 ? 1 : pagingInfo.CurrentPage - 1;
         var nextPage = pagingInfo.CurrentPage + 1 > pagingInfo.TotalPages ? pagingInfo.TotalPages : pagingInfo.CurrentPage + 1;
         
-        <nav style="display: @(pagingInfo.TotalPages == 0 ? "none" : "inline-block")">
+        <nav style="display: @(pagingInfo.TotalPages > 0 ? "inline" : "none")">
             <ul class="pagination">
                 <li class="@(pagingInfo.CurrentPage == 1 ? "disabled" : "")">
                     <a href="@pageUrl(prevPage)" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-
-                @for (int i = 1; i <= pagingInfo.TotalPages; i++)
-                {
-                    <li class="@(i == pagingInfo.CurrentPage ? "active" : "")"><a href="@pageUrl(i)">@i</a></li>
-                }
+                
+                <li style="display: @(pagingInfo.CurrentPage > 5 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage - 5)">@(pagingInfo.CurrentPage - 5)</a></li>
+                <li style="display: @(pagingInfo.CurrentPage > 4 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage - 4)">@(pagingInfo.CurrentPage - 4)</a></li>
+                <li style="display: @(pagingInfo.CurrentPage > 3 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage - 3)">@(pagingInfo.CurrentPage - 3)</a></li>
+                <li style="display: @(pagingInfo.CurrentPage > 2 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage - 2)">@(pagingInfo.CurrentPage - 2)</a></li>
+                <li style="display: @(pagingInfo.CurrentPage > 1 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage - 1)">@(pagingInfo.CurrentPage - 1)</a></li>
+                <li class="active"><a href="@pageUrl(pagingInfo.CurrentPage)">@pagingInfo.CurrentPage</a></li>
+                <li style="display: @(pagingInfo.TotalPages - pagingInfo.CurrentPage >= 1 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage + 1)">@(pagingInfo.CurrentPage + 1)</a></li>
+                <li style="display: @(pagingInfo.TotalPages - pagingInfo.CurrentPage >= 2 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage + 2)">@(pagingInfo.CurrentPage + 2)</a></li>
+                <li style="display: @(pagingInfo.TotalPages - pagingInfo.CurrentPage >= 3 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage + 3)">@(pagingInfo.CurrentPage + 3)</a></li>
+                <li style="display: @(pagingInfo.TotalPages - pagingInfo.CurrentPage >= 4 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage + 4)">@(pagingInfo.CurrentPage + 4)</a></li>
+                <li style="display: @(pagingInfo.TotalPages - pagingInfo.CurrentPage >= 5 ? "inline" : "none")"><a href="@pageUrl(pagingInfo.CurrentPage + 5)">@(pagingInfo.CurrentPage + 5)</a></li>
                 
                 <li class="@(pagingInfo.CurrentPage == pagingInfo.TotalPages ? "disabled" : "")">
                     <a href="@pageUrl(nextPage)" aria-label="Next">

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using iStore.Domain.Abstract;
+using iStore.Domain.Entities;
 using iStore.WebUI.Models;
 
 namespace iStore.WebUI.Controllers
@@ -38,6 +40,13 @@ namespace iStore.WebUI.Controllers
                 },
                 CurrentCategory = category
             };
+
+            // пустая модель
+            //var model = new ItemsListViewModel()
+            //{
+            //    Items = new List<Item>(),
+            //    PagingInfo = new PagingInfo() {ItemsPerPage = 12}
+            //};
 
             return View(model);
         }
