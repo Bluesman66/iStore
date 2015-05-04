@@ -14,9 +14,8 @@ namespace iStore.WebUI.Controllers
             _repository = repository;
         }
 
-        public ActionResult Store()
+        public ActionResult Catalog()
         {
-            var items = _repository.Items;
             return View();
         }
 

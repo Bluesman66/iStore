@@ -204,6 +204,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\ItemsListViewModel.cs" />
+    <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,12 +215,12 @@
     </Content>
     <Content Include="Views\Shared\_NavigationMenuDesktop.cshtml" />
     <Content Include="Views\Shared\_NavigationMenuMobile.cshtml" />
-    <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Where.cshtml" />
     <Content Include="Views\Home\Faq.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\Catalog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,9 +228,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\iStore.Domain\iStore.Domain.csproj">
       <Project>{a2fb68f4-f18f-42de-9f25-f318153c64d3}</Project>
