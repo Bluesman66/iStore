@@ -8,9 +8,9 @@ namespace iStore.Domain.Concrete
     {
         private readonly StoreDbContext _context = new StoreDbContext();
 
-        public IEnumerable<Item> Items
+        public IList<Item> Items
         {
-            get { return _context.Items; }
+            get { return new List<Item>(_context.Items); }
         }
     }
 }

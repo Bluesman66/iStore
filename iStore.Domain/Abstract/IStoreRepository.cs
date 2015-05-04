@@ -5,6 +5,6 @@ namespace iStore.Domain.Abstract
 {
     public interface IStoreRepository
     {
-        IEnumerable<Item> Items { get; } 
+        IList<Item> Items { get; } 
     }
 }

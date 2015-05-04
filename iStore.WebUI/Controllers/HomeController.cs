@@ -26,7 +26,8 @@ namespace iStore.WebUI.Controllers
                     .Where(item => category == null || item.Category == category)
                     .OrderBy(item => item.ItemId)
                     .Skip((page - 1) * PageSize)
-                    .Take(PageSize),
+                    .Take(PageSize)
+                    .ToList(),
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = page,
