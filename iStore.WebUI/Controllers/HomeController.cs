@@ -1,11 +1,22 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
+using iStore.Domain.Abstract;
 
 namespace iStore.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStoreRepository _repository;
+
+        public HomeController(IStoreRepository repository)
+        {
+            if (repository == null) throw new ArgumentNullException("repository");
+            _repository = repository;
+        }
+
         public ActionResult Store()
         {
+            var items = _repository.Items;
             return View();
         }
 

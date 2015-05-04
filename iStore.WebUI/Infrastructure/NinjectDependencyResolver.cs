@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using iStore.Domain.Abstract;
+using iStore.Domain.Concrete;
 using Ninject;
 
 namespace iStore.WebUI.Infrastructure
@@ -27,7 +29,7 @@ namespace iStore.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            
+            _kernel.Bind<IStoreRepository>().To<StoreRepository>();
         }
     }
 }
