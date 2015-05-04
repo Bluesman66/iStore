@@ -1,4 +1,9 @@
-﻿@{
+﻿@using iStore.WebUI.HtmlHelpers
+@using iStore.WebUI.Models
+
+@model ItemsListViewModel
+
+@{
     ViewBag.Title = "МАГАЗИН";
 }
 
@@ -95,24 +100,31 @@
             </div>
         </div>
     </div>
+    
+    @helper PageLinks(PagingInfo pagingInfo, Func<int, string> pageUrl)
+    {
+        <nav>
+            <ul class="pagination">
+                <li class="@(pagingInfo.CurrentPage == 1 ? "disabled" : "")">
+                    <a href="@pageUrl(pagingInfo.CurrentPage - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
 
-    <nav>
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+                @for (int i = 1; i <= pagingInfo.TotalPages; i++)
+                {
+                    <li class="@(i == pagingInfo.CurrentPage ? "active" : "")"><a href="@pageUrl(i)">@i</a></li>
+                }
+                
+                <li class="@(pagingInfo.CurrentPage == pagingInfo.TotalPages ? "disabled" : "")">
+                    <a href="@pageUrl(pagingInfo.CurrentPage + 1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    }
+
+    @PageLinks(Model.PagingInfo, x => Url.Action("Catalog", new { page = x, category = Model.CurrentCategory }))
+
 </div>
