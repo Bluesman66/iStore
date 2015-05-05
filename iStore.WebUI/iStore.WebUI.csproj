@@ -177,6 +177,7 @@
     <Content Include="Images\ec_tshirt7.jpg" />
     <Content Include="Images\ec_tshirt8.jpg" />
     <Content Include="Images\ec_tshirt9.jpg" />
+    <Content Include="Images\ec_tshirt_big.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
