@@ -160,6 +160,7 @@
     <Content Include="Images\ec_guy.jpg" />
     <Content Include="Images\ec_guy_lg.jpg" />
     <Content Include="Images\ec_guy_md.jpg" />
+    <Content Include="Images\ec_guy_sm.jpg" />
     <Content Include="Images\ec_jacket.jpg" />
     <Content Include="Images\ec_jeans.jpg" />
     <Content Include="Images\ec_pants.jpg" />
@@ -177,7 +178,9 @@
     <Content Include="Images\ec_tshirt7.jpg" />
     <Content Include="Images\ec_tshirt8.jpg" />
     <Content Include="Images\ec_tshirt9.jpg" />
-    <Content Include="Images\ec_tshirt_big.jpg" />
+    <Content Include="Images\ec_tshirt_big_lg.png" />
+    <Content Include="Images\ec_tshirt_big_md.png" />
+    <Content Include="Images\ec_tshirt_big_sm.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />

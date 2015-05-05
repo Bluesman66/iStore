@@ -6,12 +6,87 @@
 
 @Html.Partial("_NavigationMenuDesktop", "About")
 
+@helper Text() 
+{
+    <p>
+        Это текст. Кликните дважды, чтобы отредактировать его и добавить свой текст.
+        Сделать это просто: нажмите «Редактировать текст» либо кликните дважды на сам текст –
+        и можете добавить свое содержимое и выбрать шрифт. Если хотите, его можно
+        переместить в любое место на странице. Это место отлично подходит, чтобы рассказать пользователям о себе.
+    </p>
+
+    <p>
+        Здесь замечательно будет смотреться длинный текст о вашей компании и тех услугах,
+        которые вы предоставляете. Все это место можно использовать, чтобы более подробно
+        описать вашу компанию. Расскажите о вашей команде и предоставляемых услугах.
+        Расскажите посетителям историю о том, как вам в голову пришла идея собственного дела, и
+        объясните, чем ваша компания лучше конкурентов. Сделайте так, чтобы ваша компания выделялась:
+        покажите себя посетителям во всей красе. Шаблоны в компании Wix создаются с любовью, и
+        из них потом получаются отличные веб-сайты. А возможно это только благодаря поддержке и отзывам,
+        которые поступают от наших пользователей. В пункте «Инфо» раздела «Поддержка» содержится самая
+        свежая информация о новых версиях и грядущих новинках. Зайдите на форум Wix и оставьте свой отзыв.
+        Хотите, чтобы на ваш сайт пару штрихов добавил профессиональный дизайнер?
+        На Wix Arena вам поможет один из профессионалов компании Wix.
+        Кроме того, на форуме поддержки вы можете быстро получить ответ на любой вопрос.
+        Чтобы оставаться в курсе всех событий на Wix, читайте наш блог. Среди прочего, мы публикуем
+        там различные советы и просто прикольные вещи.
+    </p>
+}
+
 <div class="row">
-    <div style="border: 1px solid black" class="col-lg-offset-1 col-lg-3">
-        <img src="~/Images/ec_tshirt_big.jpg" alt="" />
+    <div class="hidden-xs hidden-sm hidden-md visible-lg">
+        <div style="margin-top: 50px" class="col-lg-offset-1 col-lg-4">
+            <img style="margin-left: 50px" src="~/Images/ec_tshirt_big_lg.png" alt="" />
+        </div>
+        <div style="margin-top: 200px; margin-bottom: 40px" class="col-lg-6">
+            <p style="font-size: 4em">НАША ИСТОРИЯ</p>
+            <p style="font-size: 2em">За что мы любим нашу работу?</p>
+            <div class="row">
+                <div class="col-lg-9">
+                    @Text()            
+                </div>
+            </div>
+        </div>
     </div>
-    <div style="border: 1px solid black" class="col-lg-8 pull-right">
-        <h1>НАША ИСТОРИЯ</h1>
-        <h4>За что мы любим нашу работу?</h4>
+
+    <div class="hidden-xs hidden-sm visible-md hidden-lg">
+        <div style="margin-top: 45px" class="col-md-offset-1 col-md-4">
+            <img style="margin-left: 50px" src="~/Images/ec_tshirt_big_md.png" alt="" />
+        </div>
+        <div style="margin-top: 160px; margin-bottom: 35px" class="col-md-6">
+            <p style="font-size: 3.8em">НАША ИСТОРИЯ</p>
+            <p style="font-size: 1.8em">За что мы любим нашу работу?</p>
+            <div class="row">
+                <div class="col-md-10">
+                    @Text()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-xs visible-sm hidden-md hidden-lg">
+        <div style="margin-top: 35px" class="col-sm-offset-1 col-sm-4">
+            <img style="margin-left: 35px" src="~/Images/ec_tshirt_big_sm.png" alt=""/>
+        </div>
+        <div style="margin-top: 135px; margin-bottom: 30px" class="col-sm-6">
+            <p style="font-size: 3em">НАША ИСТОРИЯ</p>
+            <p style="font-size: 1.4em">За что мы любим нашу работу?</p>
+            <div class="row">
+                <div class="col-sm-12">
+                    @Text()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="visible-xs hidden-sm hidden-md hidden-lg">
+        <div class="text-center" style="margin-top: 35px">
+            <img src="~/Images/ec_tshirt_big_sm.png" alt="" />
+        </div>
+        <div style="margin: 30px 40px 20px 40px">
+            <p style="font-size: 3em">НАША ИСТОРИЯ</p>
+            <p style="font-size: 1.4em">За что мы любим нашу работу?</p>
+            @Text()
+        </div>
     </div>
 </div>
