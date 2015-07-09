@@ -41,7 +41,10 @@ namespace iStore.WebUI.Controllers
                 CurrentCategory = category
             };
 
-            // пустая модель
+	        if (page > model.PagingInfo.TotalPages)
+				model.PagingInfo.CurrentPage = model.PagingInfo.TotalPages;
+
+			// пустая модель
             //var model = new ItemsListViewModel()
             //{
             //    Items = new List<Item>(),

@@ -64,4 +64,9 @@
     </div>
 }
 
-@Pagination(Model.PagingInfo, x => Url.Action("Catalog", new { page = x, category = Model.CurrentCategory }))
+@Pagination(Model.PagingInfo, x =>
+{
+    if (x > Model.PagingInfo.TotalPages)
+        x = Model.PagingInfo.TotalPages;
+    return Url.Action("Catalog", new {page = x, category = Model.CurrentCategory});
+})
