@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IStoreRepository.cs" />
     <Compile Include="Concrete\StoreDbContext.cs" />
+    <Compile Include="Concrete\StoreDbInitializer.cs" />
     <Compile Include="Concrete\StoreRepository.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
